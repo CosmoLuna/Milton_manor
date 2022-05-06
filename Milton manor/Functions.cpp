@@ -13,9 +13,14 @@ void showTitle() {
 	cout << "    |       |  |  |/ |  /  \\  |   \\__/  |  |     |_____|" << endl;
 }
 
+// Ввод
+void input() {
+	cout << "\nВыберите ответ -> ";
+}
+
 // Показ очков
 void showPoints(int& S, int& I, int& C, int& L) {
-	cout << "Ваши очки:\n";
+	cout << "\nВаши очки:\n";
 	cout << "Сила " << S << endl << "Интеллект " << I << endl << "Смелость " << C << endl << "Любовь " << L << endl;
 }
 
@@ -29,12 +34,13 @@ void menu() {
 // Первое распределение очков
 void firstspread(int& S, int& I, int& C) {
 	int points = 5;
-	int number;
+	int number = 0;
 	cout << "В начале игры у вас " << points << " очков. Вы можете распределить их по собственному желанию." << endl;
 	cout << "1. Сила;\n2. Интеллект;\n3. Смелость;\n";
 	while (points != 0) {
 		cout << "Осталось " << points << endl << "Выберите характеристику для добавления 1 очка -> ";
 		cin >> number;
+		input3Error(number);
 		if (number == 1)
 			S++;
 		else
@@ -43,12 +49,13 @@ void firstspread(int& S, int& I, int& C) {
 			else
 				C++;
 		points--;
+		
 		cout << "1. Сила " << S << endl << "2. Интеллект " << I << endl << "3. Смелость " << C << endl;
 	}
 }
 
 // Защита от неправильного ввода для  2 вариантов
-void inputError(int &a) {
+void input2Error(int &a) {
 	while (a != 1 && a != 2) {
 		cout << "\nВведите ответ -> ";
 		cin >> a;
@@ -56,9 +63,16 @@ void inputError(int &a) {
 }
 
 // Защита от неправильного ввода для 3 вариантов
-void inputError1(int& a) {
+void input3Error(int& a) {
 	while (a != 1 && a != 2 && a != 3) {
 		cout << "\nВведите ответ -> ";
 		cin >> a;
 	}
+}
+
+// Переход на новую страницу
+void Enter() {
+	cout << endl << endl;
+	system("pause");
+	system("cls");
 }

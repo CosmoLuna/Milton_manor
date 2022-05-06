@@ -139,6 +139,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Days.cpp" />
     <ClCompile Include="Functions.cpp" />
     <ClCompile Include="Source.cpp" />
   </ItemGroup>
