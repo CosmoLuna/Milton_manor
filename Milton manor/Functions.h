@@ -37,3 +37,9 @@ void day3(std::string name, std::string loveChoice, int& strength, int& intellig
 
 // Δενό 4
 void day4(std::string name, std::string loveChoice, int& strength, int& intelligence, int& courage, int& love);
+
+// Δενό 5
+void day5(std::string name, std::string loveChoice, int& strength, int& intelligence, int& courage, int& love);
+
+// Δενό 6
+void day6(std::string name, std::string loveChoice, int& strength, int& intelligence, int& courage, int& love);
