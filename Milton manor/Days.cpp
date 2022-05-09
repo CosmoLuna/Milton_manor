@@ -5,8 +5,16 @@ using namespace std;
 
 
 // День 1
-void day1(string name, int &strength, int &intelligence, int &courage, int &love) {
+void day1(string name, int &strength, int &intelligence, int &courage, int &love, bool &complete1) {
 	int choice;
+
+	int newStrength, newIntelligence, newCourage, newLove;
+
+	newStrength = strength;
+	newIntelligence = intelligence;
+	newCourage = courage;
+	newLove = love;
+
 	cout << "День 1\n\n1987 год.\nЛондон.\nВы учитель начальных классов. Пытаясь сбежать от своего прошлого, вы покидаете родной Бостон и решаете начать новую жизнь по ту сторону Атлантики."
 		<< "\nС приходом нового директора в школу, где вы работали, стало еще больше бумажной работы, дети(и особенно их родители) просто взбесились от новых правил и порядков."
 		<< "\nА после смерти вашего лучшего друга в душе образовалась самая настоящая пропасть. Вы написали заявление об увольнении, собрали чемодан и купили билет в один конец."
@@ -76,11 +84,21 @@ void day1(string name, int &strength, int &intelligence, int &courage, int &love
 		<< "\n\nВечером этого дня вы звоните маме и сообщаете, что остаетесь в Лондоне еще на какое-то время, так как вас взяли на испытательный срок.\n";
 	showPoints(strength, intelligence, courage, love);
 	Enter();
+	complete1 = true;
 }
 
 // День 2
-void day2(string name, string &loveChoice, int& strength, int& intelligence, int& courage, int& love) {
+void day2(string name, string &loveChoice, int& strength, int& intelligence, int& courage, int& love, bool& complete2) {
+
 	int choice, count = 0;
+
+	int newStrength, newIntelligence, newCourage, newLove;
+
+	newStrength = strength;
+	newIntelligence = intelligence;
+	newCourage = courage;
+	newLove = love;
+
 	cout << "День 2\n\n\"Все будет хорошо\", - думаете вы, ожидая человека, который отвезет вас в поместье Милтон."
 		<< "\n- " << name << ", это вы? – молодой мужчина лет 35 останавливает свой старенький форд прямо перед вами, - Оливер, приятно познакомиться. Давайте ваши сумки.\n- Благодарю!"
 		<< "\n\n1. Сесть на переднее сиденье\n2. Сесть на заднее сиденье";
@@ -339,12 +357,22 @@ void day2(string name, string &loveChoice, int& strength, int& intelligence, int
 
 	showPoints(strength, intelligence, courage, love);
 	Enter();
+	complete2 = true;
 }
 
 // День 3
-void day3(string name, string &loveChoice, int& strength, int& intelligence, int& courage, int& love) {
+void day3(string name, string &loveChoice, int& strength, int& intelligence, int& courage, int& love, bool& complete3) {
 	int number, choice, count = 0;
 	string strChoice;
+
+	int newStrength, newIntelligence, newCourage, newLove;
+
+	newStrength = strength;
+	newIntelligence = intelligence;
+	newCourage = courage;
+	newLove = love;
+
+
 	cout << "День 3\n\nВы просыпаетесь рано и в отличном настроении. Приводите себя в порядок и замечаете, что больше не слышите шорох в ванне. "
 		<< "Заглянув в спальню детей, вы будите Роуз и Эммета, и все вместе спускаетесь к завтраку."
 		<< "\nВнизу вы встречаете миссис Томас, Эшли, и конечно Оливера, уже расставляющего тарелки. Вы все мило беседуете."
@@ -515,7 +543,13 @@ void day3(string name, string &loveChoice, int& strength, int& intelligence, int
 			cin >> choice;
 			input2Error(choice);
 			switch (choice) {
-			case 1: {day3(name, loveChoice, strength, intelligence, courage, love); return; }
+			case 1: {
+				strength = newStrength;
+				intelligence = newIntelligence;
+				courage = newCourage;
+				love = newLove;
+				system("cls");
+				day3(name, loveChoice, strength, intelligence, courage, love, complete3); return; }
 			case 2: exit(0);
 			}
 		}
@@ -637,11 +671,19 @@ void day3(string name, string &loveChoice, int& strength, int& intelligence, int
 	
 	showPoints(strength, intelligence, courage, love);
 	Enter();
+	complete3 = true;
 }
 
 // День 4
-void day4(string name, string &loveChoice, int& strength, int& intelligence, int& courage, int& love) {
+void day4(string name, string &loveChoice, int& strength, int& intelligence, int& courage, int& love, bool& complete4) {
 	int choice;
+	int newStrength, newIntelligence, newCourage, newLove;
+
+	newStrength = strength;
+	newIntelligence = intelligence;
+	newCourage = courage;
+	newLove = love;
+
 	cout << "День 4\n\nНочь проходит спокойно. Вас не мучают кошмары, утром вы чувствуете себя очень бодро. "
 		<< "За завтраком вы ловите себя на мысли, что дети также хорошо отдохнули и не вспоминают вчерашнее происшествие с куклой."
 		<< "\n\nНовый день – новая возможность получить знания. Чем хотите заняться сегодня с детьми?"
@@ -737,7 +779,13 @@ void day4(string name, string &loveChoice, int& strength, int& intelligence, int
 			cin >> choice;
 			input2Error(choice);
 			switch (choice) {
-			case 1: {day4(name, loveChoice, strength, intelligence, courage, love); return; }
+			case 1: {
+				strength = newStrength;
+				intelligence = newIntelligence;
+				courage = newCourage;
+				love = newLove;
+				system("cls");
+				day4(name, loveChoice, strength, intelligence, courage, love, complete4); return; }
 			case 2: exit(0);
 			}
 		}
@@ -844,11 +892,20 @@ void day4(string name, string &loveChoice, int& strength, int& intelligence, int
 
 	showPoints(strength, intelligence, courage, love);
 	Enter();
+	complete4 = true;
 }
 
 // День 5
-void day5(string name, string &loveChoice, int& strength, int& intelligence, int& courage, int& love) {
+void day5(string name, string &loveChoice, int& strength, int& intelligence, int& courage, int& love, bool& complete5) {
 	int choice, number = 2;
+
+	int newStrength, newIntelligence, newCourage, newLove;
+
+	newStrength = strength;
+	newIntelligence = intelligence;
+	newCourage = courage;
+	newLove = love;
+
 	cout << "День 5\n\nНочь прошла относительно спокойно. Пару раз вы просыпались от чувства, будто кто-то находится в комнате и за вами наблюдает. "
 		<< "Но каждый раз включая настольную лампу, вы убеждались, что в комнате только вы."
 		<< "\n\"Господи, я как ребенок, ей богу. Нервы шалят\", - думаете вы."
@@ -1003,7 +1060,13 @@ void day5(string name, string &loveChoice, int& strength, int& intelligence, int
 			cin >> choice;
 			input2Error(choice);
 			switch (choice) {
-			case 1: {day5(name, loveChoice, strength, intelligence, courage, love); return ; }
+			case 1: {
+				strength = newStrength;
+				intelligence = newIntelligence;
+				courage = newCourage;
+				love = newLove;
+				system("cls");
+				day5(name, loveChoice, strength, intelligence, courage, love, complete5); return ; }
 			case 2: exit(0);
 			}
 				
@@ -1061,11 +1124,20 @@ void day5(string name, string &loveChoice, int& strength, int& intelligence, int
 		<< "\nПеред сном вы достаете записки из тумбочки и пытаетесь разложить их на кровати в правильном порядке, но у вас ничего толкового не выходит.";
 	showPoints(strength, intelligence, courage, love);
 	Enter();
+	complete5 = true;
 }
 
 // День 6
-void day6(string name, string &loveChoice, int& strength, int& intelligence, int& courage, int& love, bool& Thomas) {
+void day6(string name, string &loveChoice, int& strength, int& intelligence, int& courage, int& love, bool& Thomas, bool& complete6) {
 		int choice;
+
+		int newStrength, newIntelligence, newCourage, newLove;
+
+		newStrength = strength;
+		newIntelligence = intelligence;
+		newCourage = courage;
+		newLove = love;
+
 		cout << "День 6\n\nЭтой ночью вы спали еще хуже, чем прошлой. Рана ныла, а в голове то и дело крутились слова с записок. "
 			<< "Ощущение того, что кто-то за вами наблюдает не покидает вас даже при пробуждении.\nСегодня нет уроков, поэтому вы позволяете себе и детям нагнать упущенные часы сна на рабочей неделе."
 			<< "\nРастянувшись на кровати, вы начинаете размышлять, как провести сегодняшний день. Уроков нет, но это не значит, что день не надо проводить продуктивно. Вы встаете и уходите в ванную."
@@ -1167,7 +1239,13 @@ void day6(string name, string &loveChoice, int& strength, int& intelligence, int
 						cin >> choice;
 						input2Error(choice);
 						switch (choice) {
-						case 1: {day6(name, loveChoice, strength, intelligence, courage, love, Thomas); return ; }
+						case 1: {
+							strength = newStrength;
+							intelligence = newIntelligence;
+							courage = newCourage;
+							love = newLove;
+							system("cls");
+							day6(name, loveChoice, strength, intelligence, courage, love, Thomas, complete6); return ; }
 						case 2: exit(0);
 						}
 					}
@@ -1202,7 +1280,13 @@ void day6(string name, string &loveChoice, int& strength, int& intelligence, int
 						cin >> choice;
 						input2Error(choice);
 						switch (choice) {
-						case 1: {day6(name, loveChoice, strength, intelligence, courage, love, Thomas); return ; }
+						case 1: {
+							strength = newStrength;
+							intelligence = newIntelligence;
+							courage = newCourage;
+							love = newLove;
+							system("cls");
+							day6(name, loveChoice, strength, intelligence, courage, love, Thomas, complete6); return ; }
 						case 2: exit(0);
 						}
 					}
@@ -1245,11 +1329,20 @@ void day6(string name, string &loveChoice, int& strength, int& intelligence, int
 
 		showPoints(strength, intelligence, courage, love);
 		Enter();
+		complete6 = true;
 	}
 
 // День 7
-void day7(string name, string &loveChoice, int& strength, int& intelligence, int& courage, int& love, bool& Thomas) {
+void day7(string name, string &loveChoice, int& strength, int& intelligence, int& courage, int& love, bool& Thomas, bool& complete7) {
 		int choice;
+
+		int newStrength, newIntelligence, newCourage, newLove;
+
+		newStrength = strength;
+		newIntelligence = intelligence;
+		newCourage = courage;
+		newLove = love;
+
 		cout << "День7\n\nУже ближе к утру вас начинают атаковать кошмары. Тени, скрежет, опасность для жизни – вы явно не ожидали такого от простой работы с двумя детьми."
 			<< "\nГенри приедет завтра, мысленно отметив, что надо обсудить произошедшее с ним, вы встаете с кровати."
 			<< "\n\nПосле раннего завтрака самое время провести с детьми занятия. Чем займетесь?"
@@ -1380,7 +1473,13 @@ void day7(string name, string &loveChoice, int& strength, int& intelligence, int
 					cin >> choice;
 					input2Error(choice);
 					switch (choice) {
-					case 1: {day7(name, loveChoice, strength, intelligence, courage, love, Thomas); return ; }
+					case 1: {
+						strength = newStrength;
+						intelligence = newIntelligence;
+						courage = newCourage;
+						love = newLove;
+						system("cls");
+						day7(name, loveChoice, strength, intelligence, courage, love, Thomas, complete7); return ; }
 					case 2: exit(0);
 					}
 				}
@@ -1549,11 +1648,20 @@ void day7(string name, string &loveChoice, int& strength, int& intelligence, int
 				showPoints(strength, intelligence, courage, love);
 			}
 		Enter();
+		complete7 = true;
 }
 
 // День 8
 void day8(string name, string& loveChoice, int& strength, int& intelligence, int& courage, int& love, bool& Thomas) {
 	int choice;
+
+	int newStrength, newIntelligence, newCourage, newLove;
+
+	newStrength = strength;
+	newIntelligence = intelligence;
+	newCourage = courage;
+	newLove = love;
+
 	cout << "День 8\n\nВы давно так хорошо не спали, подумали вы, когда открыли глаза в 5 утра и посмотрели на часы. Можно поспать еще пару часов, дети обычно встают в 9."
 		<< "\nВы закрываете глаза и погружаетесь в сон. Только на этот раз ваш сон более чем странный, беспокойный, темный."
 		<< "\nВы оказываетесь в каком-то доме, похожем на поместье, вокруг люди, выглядящие нетипично: женщины в длинных платьях, мужчины в сюртуках, - это явно не 80-е, да и вообще далеко не 20 век."
@@ -1779,7 +1887,13 @@ void day8(string name, string& loveChoice, int& strength, int& intelligence, int
 					cin >> choice;
 					input2Error(choice);
 					switch (choice) {
-					case 1: {day8(name, loveChoice, strength, intelligence, courage, love, Thomas); return ; }
+					case 1: {
+						strength = newStrength;
+						intelligence = newIntelligence;
+						courage = newCourage;
+						love = newLove;
+						system("cls");
+						day8(name, loveChoice, strength, intelligence, courage, love, Thomas); return ; }
 					case 2: exit(0);
 					}
 				}
@@ -1792,7 +1906,13 @@ void day8(string name, string& loveChoice, int& strength, int& intelligence, int
 				cin >> choice;
 				input2Error(choice);
 				switch (choice) {
-				case 1: {day6(name, loveChoice, strength, intelligence, courage, love, Thomas); return ; }
+				case 1: {
+					strength = newStrength;
+					intelligence = newIntelligence;
+					courage = newCourage;
+					love = newLove;
+					system("cls");
+					day8(name, loveChoice, strength, intelligence, courage, love, Thomas); return ; }
 				case 2: exit(0);
 				}
 			}
@@ -1849,7 +1969,13 @@ void day8(string name, string& loveChoice, int& strength, int& intelligence, int
 			cin >> choice;
 			input2Error(choice);
 			switch (choice) {
-			case 1: {day8(name, loveChoice, strength, intelligence, courage, love, Thomas); return; }
+			case 1: {
+				strength = newStrength;
+				intelligence = newIntelligence;
+				courage = newCourage;
+				love = newLove;
+				system("cls");
+				day8(name, loveChoice, strength, intelligence, courage, love, Thomas); return; }
 			case 2: exit(0);
 			}
 		}
@@ -1992,20 +2118,4 @@ void day8(string name, string& loveChoice, int& strength, int& intelligence, int
 		cout << "\nВы больше ничего не слышите от Генри или других обитателей поместья Милтон.\n\nКонец.\n";
 	}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
