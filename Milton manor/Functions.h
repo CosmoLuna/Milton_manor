@@ -28,18 +28,17 @@ void Enter();
 
 // Äåíü 1
 void day1(std::string name, int& strength, int& intelligence, int& courage, int& love);
-
 // Äåíü 2
-void day2(std::string name, std::string loveChoice, int& strength, int& intelligence, int& courage, int& love);
-
+void day2(std::string name, std::string &loveChoice, int& strength, int& intelligence, int& courage, int& love);
 // Äåíü 3
-void day3(std::string name, std::string loveChoice, int& strength, int& intelligence, int& courage, int& love);
-
+void day3(std::string name, std::string &loveChoice, int& strength, int& intelligence, int& courage, int& love);
 // Äåíü 4
-void day4(std::string name, std::string loveChoice, int& strength, int& intelligence, int& courage, int& love);
-
+void day4(std::string name, std::string &loveChoice, int& strength, int& intelligence, int& courage, int& love);
 // Äåíü 5
-void day5(std::string name, std::string loveChoice, int& strength, int& intelligence, int& courage, int& love);
-
+void day5(std::string name, std::string &loveChoice, int& strength, int& intelligence, int& courage, int& love);
 // Äåíü 6
-void day6(std::string name, std::string loveChoice, int& strength, int& intelligence, int& courage, int& love);
+void day6(std::string name, std::string &loveChoice, int& strength, int& intelligence, int& courage, int& love, bool &Thomas);
+// Äåíü 7
+void day7(std::string name, std::string &loveChoice, int& strength, int& intelligence, int& courage, int& love, bool& Thomas);
+// Äåíü 8
+void day8(std::string name, std::string& loveChoice, int& strength, int& intelligence, int& courage, int& love, bool& Thomas);

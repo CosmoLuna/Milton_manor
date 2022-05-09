@@ -9,9 +9,10 @@ int main() {
 	setlocale(LC_ALL, "Russian");
 	srand(time(NULL));
 	int strength = 0, intelligence = 0, courage = 0, love = 0;
-	string loveChoice, strChoice;
+	string loveChoice;
+	bool Thomas = false;
 
-	// showTitle();
+	showTitle();
 
 	cout << "\nИгра \"Поместье Милтон\".\nОт вашего выбора зависит исход игры. ";
 	cout << "Выбирайте с умом. Начинаем!\nКак вас зовут? -> ";
@@ -19,7 +20,7 @@ int main() {
 	cin >> name;
 	cout << "Добро пожаловать в игру, " << name << "!\n\n";
 
-	// firstspread(strength, intelligence, courage);
+	firstspread(strength, intelligence, courage);
 
 	Enter();
 	cout << "В игре так же есть любовная линия, но пока она недоступна.\n";
@@ -27,15 +28,14 @@ int main() {
 
 	Enter();
 
-	// day1(name, strength, intelligence, courage, love);
-	// day2(name, loveChoice, strength, intelligence, courage, love);
-	// day3(name, loveChoice, strength, intelligence, courage, love);
-	// day4(name, loveChoice, strength, intelligence, courage, love);
-	// day5(name, loveChoice, strength, intelligence, courage, love);
-	day6(name, loveChoice, strength, intelligence, courage, love);
-
-
-
+	day1(name, strength, intelligence, courage, love);
+	day2(name, loveChoice, strength, intelligence, courage, love);
+	day3(name, loveChoice, strength, intelligence, courage, love);
+	day4(name, loveChoice, strength, intelligence, courage, love);
+	day5(name, loveChoice, strength, intelligence, courage, love);
+	day6(name, loveChoice, strength, intelligence, courage, love, Thomas);
+	day7(name, loveChoice, strength, intelligence, courage, love, Thomas);
+	day8(name, loveChoice, strength, intelligence, courage, love, Thomas);
 
 	return 0;
 }
