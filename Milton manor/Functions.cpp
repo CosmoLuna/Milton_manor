@@ -182,6 +182,7 @@ void loadDay(string name, string& loveChoice, int& strength, int& intelligence, 
 		if (complete7 == true) {
 			system("cls");
 			day8(name, loveChoice, strength, intelligence, courage, love, Thomas);
+			system("pause");
 			break;
 		}
 		else {
