@@ -23,7 +23,7 @@ int main() {
 
 	Enter();
 
-	// firstspread(strength, intelligence, courage);
+	firstspread(strength, intelligence, courage);
 
 	Enter();
 	cout << "В игре так же есть любовная линия, но пока она недоступна.\n";
@@ -34,20 +34,13 @@ int main() {
 	// menu(name, loveChoice, strength, intelligence, courage, love, Thomas, complete1, complete2, complete3, complete4, complete5, complete6, complete7);
 
 
-	/*day1(name, strength, intelligence, courage, love, complete1);
+	day1(name, strength, intelligence, courage, love, complete1);
 	day2(name, loveChoice, strength, intelligence, courage, love, complete2);
 	day3(name, loveChoice, strength, intelligence, courage, love, complete3);
 	day4(name, loveChoice, strength, intelligence, courage, love, complete4);
 	day5(name, loveChoice, strength, intelligence, courage, love, complete5);
 	day6(name, loveChoice, strength, intelligence, courage, love, Thomas, complete6);
-	day7(name, loveChoice, strength, intelligence, courage, love, Thomas, complete7);*/
-
-	strength = 7;
-	intelligence = 10;
-	courage = 8;
-	love = 5;
-	loveChoice = "Ashley";
-
+	day7(name, loveChoice, strength, intelligence, courage, love, Thomas, complete7);
 	day8(name, loveChoice, strength, intelligence, courage, love, Thomas);
 
 

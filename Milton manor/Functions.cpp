@@ -96,7 +96,7 @@ void menu(string name, string& loveChoice, int& strength, int& intelligence, int
 	} while (m != 3);
 }
 
-// Загрузку дня
+// Загрузка дня
 void loadDay(string name, string& loveChoice, int& strength, int& intelligence, int& courage, int& love, bool& Thomas, bool& complete1, bool& complete2, bool& complete3, bool& complete4, bool& complete5, bool& complete6, bool& complete7) {
 	system("cls");
 	cout << "Какой день вы хотите загрузить?";
